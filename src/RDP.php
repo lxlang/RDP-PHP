@@ -9,8 +9,6 @@ namespace davidredgar\polyline;
 //This implementation comes with no warranty or guarantee of fitness for any
 //purpose.
 
-require_once __DIR__ . '/../vendor/autoload.php';
-
 //=============================================================================
 //An implementation of the Ramer-Douglas-Peucker algorithm for reducing
 //the number of points on a polyline - see:
