@@ -1,20 +1,23 @@
 <?php
-namespace davidredgar\polyline;
+namespace Test;
 
-class EdgeCaseTests extends \PHPUnit\Framework\TestCase
+use davidredgar\polyline\RDP;
+use PHPUnit\Framework\TestCase;
+
+class EdgeCaseTest extends TestCase
 {
-    public function testNoPointsInLine()
+    public function testNoPointsInLine(): void
     {
-        $line = array();
+        $line = [];
 
         $rdpResult = RDP::RamerDouglasPeucker2d($line, 1);
 
-        $expectedResult = array();
+        $expectedResult = [];
 
         $this->assertEquals($expectedResult, $rdpResult, "result polyline array incorrect");
     }
 
-    public function testOnePointInLine()
+    public function testOnePointInLine(): void
     {
         $line = array(array(10, 10));
 
@@ -25,7 +28,7 @@ class EdgeCaseTests extends \PHPUnit\Framework\TestCase
         $this->assertEquals($expectedResult, $rdpResult, "result polyline array incorrect");
     }
 
-    public function testTwoPointsInLine()
+    public function testTwoPointsInLine(): void
     {
         $line = array(array(10, 10), array(20, 20));
 
@@ -36,7 +39,7 @@ class EdgeCaseTests extends \PHPUnit\Framework\TestCase
         $this->assertEquals($expectedResult, $rdpResult, "result polyline array incorrect");
     }
 
-    public function testLineWithJustTwoIdenticalPoints()
+    public function testLineWithJustTwoIdenticalPoints(): void
     {
         $line = array(array(1, 2), array(3, 5));
 
@@ -51,7 +54,7 @@ class EdgeCaseTests extends \PHPUnit\Framework\TestCase
         $this->assertEquals($expectedResult, $rdpResult, "result polyline array incorrect");
     }
 
-    public function testThreePointsWithIdenticalStartAndEndLine()
+    public function testThreePointsWithIdenticalStartAndEndLine(): void
     {
         $line = array(array(0.1, 0.1), array(0.9, 0.7), array(0.1, 0.1));
 
@@ -68,7 +71,7 @@ class EdgeCaseTests extends \PHPUnit\Framework\TestCase
         $this->assertEquals($expectedResult, $rdpResult, "result polyline array incorrect");
     }
 
-    public function testEpsilon0()
+    public function testEpsilon0(): void
     {
         $line = array(array(3400, 89000), array(5500, 52000), array(4800, 41000));
 
