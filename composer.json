@@ -1,5 +1,5 @@
 {
-  "name": "david-r-edgar/rdp",
+  "name": "lxlang/rdp",
   "type": "library",
   "description": "Ramer–Douglas–Peucker algorithm for polyline simplification",
   "keywords": [
@@ -17,6 +17,12 @@
       "name": "David Edgar",
       "email": "david.r.edgar@gmail.com",
       "homepage": "http://www.loughrigg.org",
+      "role": "Developer"
+    },
+    {
+      "name": "Tobias Reinshaus",
+      "email": "github@reins.haus",
+      "homepage": "http://reins.haus",
       "role": "Developer"
     }
   ],
